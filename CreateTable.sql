@@ -76,3 +76,5 @@ ALTER TABLE tblEpisodeCompanion
 ADD CONSTRAINT FK_tblEpisodeCompanion_tblCompanion_CompanionId
 FOREIGN KEY (CompanionId) REFERENCES tblCompanion(CompanionId);
 
+ALTER TABLE tblEpisode
+ALTER COLUMN DoctorId INT NULL;
