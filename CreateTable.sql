@@ -33,14 +33,12 @@ CREATE TABLE tblEpisodeCompanion (
 	EpisodeCompanionId INT NOT NULL PRIMARY KEY,
 	EpisodeId INT NOT NULL,
 	CompanionId INT NOT NULL,
-);
-
+)
 CREATE TABLE tblCompanion (
 	CompanionId INT NOT NULL PRIMARY KEY,
 	CompanionName VARCHAR(20) NOT NULL,
 	WhoPlayed VARCHAR(20) NOT NULL
-);
-
+)
 CREATE TABLE tblDoctor (
 	DoctorId INT NOT NULL PRIMARY KEY,
 	DoctorNumber INT NOT NULL,
@@ -48,8 +46,7 @@ CREATE TABLE tblDoctor (
 	BirthDate DATE,
 	FirstEpisodeDate DATE NOT NULL,
 	LastEpisodeDate DATE NOT NULL
-);
-
+)
 ALTER TABLE tblEpisodeEnemy
 ADD CONSTRAINT FK_tblEpisodeEnemy_tblEpisode_EpisodeId
 FOREIGN KEY (EpisodeId) REFERENCES tblEpisode(EpisodeId);
@@ -58,11 +55,9 @@ ALTER TABLE tblEpisodeEnemy
 ADD CONSTRAINT FK_tblEpisodeEnemy_tblEnemy_EnemyId
 FOREIGN KEY (EnemyId) REFERENCES tblEnemy(EnemyId);
 
-
 ALTER TABLE tblEpisode
 ADD CONSTRAINT FK_tblEpisode_tblAuthor_AuthorId
 FOREIGN KEY (AuthorId) REFERENCES tblAuthor(AuthorId);
-
 
 ALTER TABLE tblEpisode
 ADD CONSTRAINT FK_tblEpisode_tblDoctor_DoctorId
@@ -75,4 +70,3 @@ FOREIGN KEY (EpisodeId) REFERENCES tblEpisode(EpisodeId);
 ALTER TABLE tblEpisodeCompanion
 ADD CONSTRAINT FK_tblEpisodeCompanion_tblCompanion_CompanionId
 FOREIGN KEY (CompanionId) REFERENCES tblCompanion(CompanionId);
-
