@@ -9,9 +9,6 @@ VALUES
    (4,'Omar','Enemy 4'),
    (5,'Hamdan','Enemy 5')
 ;
-
-
-
 INSERT INTO tblAuthor
     (AuthorId,AuthorName)
 VALUES
@@ -21,9 +18,6 @@ VALUES
 	(4,'Samer'),
 	(5,'Jamal')
 ;
-
-
-
 INSERT INTO tblDoctor
      (DoctorId,DoctorName,DoctorNumber,FirstEpisodeDate,LastEpisodeDate,BirthDate)
 VALUES
@@ -33,9 +27,6 @@ VALUES
      (4,'Ahmad','0559728419','1994-5-14','1990-10-15','1993-10-15'),
      (5,'Samer','0559728412','1980-11-12','1990-10-15','1994-10-15')
 ;
-
-
-
 INSERT INTO tblEpisode
      (EpisodeId,SeriesNumber,EpisodeNumber,Episodetype,Title,EpsodeDate,DoctorId,AuthorId,Notes)
 VALUES
@@ -45,9 +36,6 @@ VALUES
      (4,1556,265,'type 4','title 4','12/1/1983',5,2,'notes 2'),
      (5,1455695,455,'type 5','title 5','12/1/1984',4,5,'notes 2')
 ;
-
-
-
 INSERT INTO tblEpisodeEnemy
       (EpisodeEnemyId,EnemyId,EpisodeId)
 VALUES
@@ -57,7 +45,6 @@ VALUES
 	  (4,2,4),
 	  (5,3,3)
 ;
-
 INSERT INTO tblCompanion
       (CompanionId,CompanionName,WhoPlayed)
 VALUES
@@ -67,8 +54,6 @@ VALUES
       (4,'Omar','Played 4'),
       (5,'Ahmad','Played 5')
 ;
-
-
 INSERT INTO tblEpisodeCompanion
       (EpisodeCompanionId,CompanionId,EpisodeId)
 VALUES
