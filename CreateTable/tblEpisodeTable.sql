@@ -4,7 +4,7 @@ IF NOT EXISTS (SELECT * FROM sys.tables WHERE name = 'tblEnemy')
 BEGIN
 CREATE TABLE tblEpisode
 (
-	EpisodeId INT NOT NULL PRIMARY KEY,
+	EpisodeId INT PRIMARY KEY IDENTITY(1,1),
 	SeriesNumber INT NOT NULL,
 	EpisodeNumber INT NOT NULL,
 	Episodetype VARCHAR(20) NOT NULL,

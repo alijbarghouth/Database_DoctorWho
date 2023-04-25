@@ -3,7 +3,7 @@ USE DoctorWho
 IF NOT EXISTS (SELECT * FROM sys.tables WHERE name = 'tblEnemy')
 BEGIN
 CREATE TABLE tblEpisodeCompanion (
-	EpisodeCompanionId INT NOT NULL PRIMARY KEY,
+	EpisodeCompanionId INT PRIMARY KEY IDENTITY(1,1),
 	EpisodeId INT NOT NULL,
 	CompanionId INT NOT NULL,
 	CONSTRAINT FK_tblEpisodeCompanion_tblEpisode_EpisodeId
