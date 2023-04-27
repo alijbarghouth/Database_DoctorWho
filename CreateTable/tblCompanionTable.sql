@@ -1,6 +1,6 @@
 USE DoctorWho
 
-IF NOT EXISTS (SELECT * FROM sys.tables WHERE name = 'tblEnemy')
+IF NOT EXISTS (SELECT * FROM sys.tables WHERE name = 'tblCompanion')
 BEGIN
 CREATE TABLE tblCompanion (
 	CompanionId INT PRIMARY KEY IDENTITY(1,1),

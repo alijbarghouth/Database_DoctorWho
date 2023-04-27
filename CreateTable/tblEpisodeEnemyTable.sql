@@ -1,6 +1,6 @@
 USE DoctorWho;
 
-IF NOT EXISTS (SELECT * FROM sys.tables WHERE name = 'tblEnemy')
+IF NOT EXISTS (SELECT * FROM sys.tables WHERE name = 'tblEpisodeEnemy')
 BEGIN
 CREATE TABLE tblEpisodeEnemy
 (
