@@ -1,6 +1,5 @@
-DELETE FROM tblCompanion
-       WHERE CompanionId 
-	   NOT IN 
-	   (SELECT DISTINCT CompanionId 
-	   FROM tblEpisodeCompanion)
-;
+USE DoctorWho;
+DELETE C
+FROM tblCompanion C
+LEFT JOIN tblEpisodeCompanion E ON C.CompanionId = E.CompanionId
+WHERE E.EpisodeCompanionId IS NULL;
