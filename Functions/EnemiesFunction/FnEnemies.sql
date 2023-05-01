@@ -12,4 +12,5 @@ DECLARE @return_value VARCHAR(MAX)
 		ON C.EnemyId = E.EnemyId
 	WHERE
 		E.EpisodeId = @id;
+return @return_value
 END;
