@@ -12,4 +12,5 @@ BEGIN
 		ON C.CompanionId = E.CompanionId
 	WHERE
 		E.EpisodeId = @id;
+return @return_value;
 END;
